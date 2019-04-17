@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+        Pending List
+    </title>
+</head>
+
+<body>
+	<h1>Пользователи, не завершившие работу</h1>
+	<p></p>
+    <div>
+    	<a href="http://localhost:8080">Вернуться</a>
+    </div>
+	<p></p>
+    <div>
+       <table cellspacing="2" border="1" cellpadding="5">
+		    <thead>
+		        <tr>
+		            <th> ssoid </th>
+		            <th> subtype </th>
+		        </tr>
+		    </thead>
+		    <tbody>		    
+		        <tr th:each="pend : ${pending}">
+		            <td><span th:text="${pend.ssoid}"> ssoid </span></td>
+		            <td><span th:text="${pend.subtype}"> subtype </span></td>
+		        </tr>
+		    </tbody>
+		</table>
+    </div>
+</body>
+</html>

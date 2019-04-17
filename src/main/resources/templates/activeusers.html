@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+        Active Users
+    </title>
+</head>
+
+<body>
+	<h1>Активные пользователи в последний час</h1>
+	<p></p>
+    <div>
+    	<a href="http://localhost:8080">Вернуться</a>
+    </div>
+	<p></p>
+    <div>
+    	<table cellspacing="2" border="1" cellpadding="5" >
+		    <thead>
+		        <tr>
+		            <th> ssoid </th>
+		            <th> formid </th>
+		        </tr>
+		    </thead>
+		    <tbody>		    
+		        <tr th:each="act : ${active}">
+		            <td><span th:text="${act.ssoid}"> ssoid </span></td>
+		            <td><span th:text="${act.formid}"> formid </span></td>
+		        </tr>
+		    </tbody>
+		</table>
+    </div>
+    <p></p>
+</body>
+</html>

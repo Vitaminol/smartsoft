@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>
+        Top forms
+    </title>
+</head>
+
+<body>
+	<h1>Самые используемые формы</h1>
+       (в порядке убывания популярности):
+	<p></p>
+	<p></p>
+    <div>
+       <table cellspacing="2" border="1" cellpadding="5">
+		    <tbody>
+		        <tr th:each="form : ${forms}">
+		            <td><span th:text="${form}">formid</span></td>
+		        </tr>
+		    </tbody>
+		</table>
+    </div>
+    <p></p>
+    <p></p>
+    <div>
+    	<a href="http://localhost:8080">Вернуться</a>
+    </div>
+
+</body>
+</html>
